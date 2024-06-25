@@ -40,3 +40,36 @@ cache/[id]/uploader_avatar.png
 
 Something like this.
 This will be ignored by git using the ``.gitignore`` file.
+
+## Colors
+
+[wallhaven.cc](https://wallhaven.cc) provides 5 dominant colors in a given wallpaper.
+I wanted to have themed elements on the startpage according to the user's preferred wallpaper.
+The problem is that the colors are organised pretty much randomly.
+I could not find documentation regarding color ordering.
+
+I initially thought I'll take the brightest and darkest and use those are foreground and background colors.
+ChatGPT suggested the rest can be considered as accent colors.
+ChatGPT also suggested categorizing the colors based on their brightness like me, but the technical term seems to be luminescence.
+
+Luminescence = 0.2126 x Red + 0.7152 x Green + 0.0722 x Blue
+
+Based on this, the lightest and darkest will be foreground/background colors and the rest will be accent colors.
+
+Also I'm thinking of adding the following to the main stylesheet:
+```css
+@import 'colors.css'
+```
+colors.css will serve a style sheet like this:
+
+```css
+:root {
+    --foreground: #ffffff;
+    --background: #000000;
+    /* colors below are random for the sake of demonstration */
+    --accent1: #12fa45;
+    --accent2: #aed331;
+    --accent3: #623aff;
+}
+```
+I'm going to run the luminescence calculation and cache it server-side.
