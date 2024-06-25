@@ -11,8 +11,22 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 1.25rem;
+    background-color: #cccccc;
 }
 
 form > * {
-    font-size: 2rem;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+input {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    padding-right: 1rem;
 }
