@@ -29,10 +29,10 @@ class CacheHandler:
             except:
                 return IOError
         
-        def retrieve(self, id:str):
-            try:
-                with open(f'{self.cache_dir}/{id}/response.json') as file:
-                    return json.load(file)
-            except FileNotFoundError:
-                self.store(id)
-                self.retrieve(id)
+    def retrieve(self, id:str):
+        try:
+            with open(f'{self.cache_dir}/{id}/response.json') as file:
+                return json.load(file)
+        except FileNotFoundError:
+            self.store(id)
+            self.retrieve(id)
