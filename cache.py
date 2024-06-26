@@ -6,6 +6,8 @@ class CacheHandler:
     def __init__(self, cache_dir='./cache'):
             self.cache_dir = cache_dir
             
+    # TODO implement storing and retreiving media files as well
+
     def store(self, id:str):
 
         # handle cases of url or just the wallpaper id

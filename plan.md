@@ -41,6 +41,10 @@ cache/[id]/uploader_avatar.png
 Something like this.
 This will be ignored by git using the ``.gitignore`` file.
 
+I'm making a python ``CacheHandler`` class which stores and retreieves files from the cache.
+I'll deal with downloading media files later and for now I'll just pass in the url to the browser.
+Media is not rate-limited but does not work offline.
+
 ## Colors
 
 [wallhaven.cc](https://wallhaven.cc) provides 5 dominant colors in a given wallpaper.
